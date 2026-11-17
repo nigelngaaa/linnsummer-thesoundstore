@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en-NZ" data-cur="NZD">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Linn Selekt DSM · The next level is on us | The Sound Store</title>
+<meta name="description" content="Buy a Linn Selekt DSM Classic or Edition with an output cartridge and DAC and receive an upgrade to the next level DAC at no extra cost. Book a demonstration at The Sound Store, Auckland.">
+<meta property="og:title" content="Linn Selekt DSM · The next level is on us">
+<meta property="og:description" content="Upgrade to the next level DAC at no extra cost. 16 November 2026 to 5 January 2027.">
+<meta property="og:image" content="https://linnsummer.thesoundstore.nz/img/hero.jpg">
+<link rel="icon" href="img/linn-black-mark.png">
+<style>
+@font-face{font-family:"Instrument Serif";src:url(fonts/is.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(fonts/isi.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Manrope";src:url(fonts/mr.woff2) format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
+:root{
+  --ink:#121315; --ink-2:#1a1c1f; --ink-3:#24272b; --line:rgba(235,236,237,.12);
+  --paper:#f3efe8; --paper-2:#e9e3d8; --text:#ebeced; --muted:#a3a6aa; --muted-dark:#6b6760; --body:#4a4741;
+  --copper:#d16228; --copper-soft:#e08a5a; --copper-ink:#b4521f; --lline:rgba(18,19,21,.14);
+  --serif:"Instrument Serif","Iowan Old Style",Georgia,serif; --sans:"Manrope","Segoe UI",system-ui,sans-serif;
+  --pad:clamp(1.25rem,4.4vw,4.5rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--ink);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.deck{height:100vh;height:100dvh;overflow-y:auto;scroll-behavior:smooth}
+.slide{position:relative;min-height:100vh;min-height:100dvh;display:flex;overflow:hidden}
+.eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--copper-soft)}
+.paper .eyebrow{color:var(--copper-ink)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1}
+h2{font-size:clamp(2.4rem,4.8vw,4.6rem)}
+h3{font-size:clamp(1.45rem,1.9vw,1.9rem)}
+em{font-style:italic;color:var(--copper-soft)}
+.paper em{color:var(--copper)}
+p{line-height:1.7}
+.lead{font-size:clamp(1rem,1.15vw,1.12rem);color:var(--muted);max-width:40rem}
+.paper{background:var(--paper);color:var(--ink)}
+.paper .lead,.paper p{color:var(--body)}
+.sec{flex-direction:column;justify-content:center;padding:7rem var(--pad) 5rem;width:100%}
+.head2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:clamp(1.8rem,5vh,3rem)}
+.head2 h2{margin-top:1rem}
+.cur{white-space:nowrap}
+.fine{font-size:.76rem;color:var(--muted);margin-top:1.4rem;line-height:1.6;max-width:62rem}
+.paper .fine{color:var(--muted-dark)}
+
+/* bar */
+.bar{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem var(--pad);transition:color .4s,background .4s}
+.bar.solid{background:rgba(18,19,21,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+body.on-paper .bar.solid{background:rgba(243,239,232,.9)}
+.bar .logos{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.bar .logos .sep{width:1px;height:26px;background:currentColor;opacity:.3}
+.bar .logo{height:36px;width:auto}
+.bar .tss{display:block}
+.bar .linn{height:34px;width:auto}
+.bar .dark{display:none}
+body.on-paper .bar .light{display:none}
+body.on-paper .bar .dark{display:block}
+.bar nav{display:flex;gap:1.6rem;align-items:center;font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;font-weight:700}
+.bar nav a{white-space:nowrap;text-decoration:none;opacity:.66;transition:opacity .2s}
+.bar nav a:hover,.bar nav a.active{opacity:1}
+body.on-paper .bar{color:var(--ink)}
+.seg{display:inline-flex;border:1px solid currentColor;border-radius:999px;padding:2px;opacity:.9}
+.seg button{background:none;border:0;font-size:.68rem;letter-spacing:.14em;font-weight:700;padding:.38rem .7rem;border-radius:999px;cursor:pointer}
+.seg button.on{background:var(--copper);color:#fff}
+.right{display:flex;align-items:center;gap:1.2rem}
+.navcta{display:inline-flex;align-items:center;border:1px solid currentColor;border-radius:999px;padding:.45rem .9rem;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;text-decoration:none;white-space:nowrap}
+.navcta:hover{background:var(--copper);border-color:var(--copper);color:#fff}
+.progress{position:fixed;left:0;bottom:0;height:2px;background:var(--copper);z-index:21;width:0;transition:width .35s ease}
+.js .r{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .in .r{opacity:1;transform:none}
+.in .r.d1{transition-delay:.1s}.in .r.d2{transition-delay:.2s}.in .r.d3{transition-delay:.3s}.in .r.d4{transition-delay:.4s}
+@media (prefers-reduced-motion:reduce){.js .r{opacity:1;transform:none;transition:none}.deck{scroll-behavior:auto}}
+.cta{display:inline-flex;justify-content:center;align-items:center;gap:.6rem;background:var(--copper);color:#fff;border:0;border-radius:999px;padding:.95rem 1.5rem;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap}
+.cta:hover{background:var(--copper-ink)}
+.cta.alt{background:none;border:1px solid currentColor;color:inherit}
+.cta.alt:hover{background:rgba(235,236,237,.08)}
+
+/* cover */
+.cover{background:var(--ink)}
+.cover .visual{position:absolute;inset:0 0 0 38%}
+.cover .visual img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.cover .visual::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(18,19,21,.7) 28%,rgba(18,19,21,0) 65%),linear-gradient(0deg,rgba(18,19,21,.7),rgba(18,19,21,0) 40%)}
+.cover .copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--pad);padding-bottom:clamp(3rem,9vh,6rem);max-width:56rem}
+.cover h1{font-size:clamp(3.2rem,min(7.4vw,11vh),7.6rem);line-height:.98;margin:1.3rem 0 1.5rem}
+.meta{display:flex;flex-wrap:wrap;gap:1.4rem 2.6rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line);max-width:44rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.meta b{display:block;color:var(--text);font-weight:600;margin-bottom:.35rem;font-family:var(--serif);font-size:1.6rem;letter-spacing:0;text-transform:none}
+.cover .btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.2rem}
+
+/* offer */
+.ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.rung{background:#fff;border:1px solid var(--lline);border-radius:6px;padding:1.6rem 1.5rem 1.4rem;display:flex;flex-direction:column}
+.rung .n{font-family:var(--serif);font-style:italic;color:var(--copper);font-size:1.3rem}
+.rung .buy{margin-top:1.1rem;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted-dark)}
+.rung .from{font-family:var(--serif);font-size:1.7rem;margin-top:.3rem}
+.rung .arrow{margin:.7rem 0;color:var(--copper);font-size:1.2rem}
+.rung .to{font-family:var(--serif);font-size:2.1rem;color:var(--ink)}
+.rung .foot{margin-top:auto;padding-top:1.1rem;border-top:1px solid var(--lline);font-size:.8rem;color:var(--body);line-height:1.55}
+.cond{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.2rem;padding-top:1.6rem;border-top:1px solid var(--lline)}
+.cond div{font-size:.86rem;line-height:1.55;color:var(--body)}
+.cond b{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin-bottom:.45rem}
+
+/* builder */
+.bld{justify-content:flex-start}
+.stepper{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.6rem;list-style:none}
+.stepper button{display:flex;align-items:center;gap:.6rem;background:none;border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem .45rem .45rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted);cursor:pointer}
+.stepper button .k{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--ink-3);font-size:.7rem;letter-spacing:0}
+.stepper button .v{text-transform:none;letter-spacing:0;font-weight:500;color:var(--text);margin-left:-.25rem}
+.stepper button .v:empty{display:none}
+.stepper button.on{border-color:var(--copper-soft);color:var(--text)}
+.stepper button.on .k{background:var(--copper);color:#fff}
+.stepper button.done .k{background:var(--text);color:var(--ink)}
+.stepper button:disabled{opacity:.45;cursor:default}
+.panel[hidden]{display:none}
+.panel .q{font-family:var(--serif);font-size:clamp(1.7rem,2.6vw,2.4rem);margin-bottom:1.3rem}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;max-width:1100px}
+.choice{text-align:left;background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:1.5rem;cursor:pointer;display:flex;flex-direction:column;gap:.8rem;transition:border-color .2s,transform .2s,background .2s}
+.choice:hover{border-color:rgba(224,138,90,.6);transform:translateY(-2px)}
+.choice:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+.choice.sel{border-color:var(--copper);background:#1f1b19}
+.choice h3{font-size:1.9rem}
+.choice .tag{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--copper-soft)}
+.choice p{font-size:.9rem;color:var(--muted);line-height:1.6}
+.choice .go{margin-top:auto;padding-top:.9rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--text)}
+.choice .go span:last-child{color:var(--copper-soft);font-size:1rem}
+.chain{width:100%;height:auto;max-height:110px}
+.chain rect{fill:none;stroke:rgba(235,236,237,.55);stroke-width:1.3}
+.chain rect.hl{stroke:var(--copper-soft);fill:rgba(209,98,40,.14)}
+.chain text{font:600 11px var(--sans);fill:#d6d8db;letter-spacing:.04em}
+.chain path{stroke:rgba(235,236,237,.4);stroke-width:1.3;fill:none}
+.hubimg{background:radial-gradient(60% 80% at 50% 60%,#2b2e33,transparent);border-radius:4px;height:clamp(110px,13vw,170px);display:flex;align-items:center;justify-content:center;padding:.4rem;width:100%}
+.hubimg img{height:100%;width:100%;object-fit:contain}
+.ticks{list-style:none;display:grid;gap:.5rem}
+.ticks li{position:relative;padding-left:1.3rem;font-size:.86rem;line-height:1.5;color:#d6d8db}
+.ticks li::before{content:"";position:absolute;left:0;top:.48rem;width:.5rem;height:.5rem;border-radius:50%;border:1.5px solid var(--copper-soft)}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;max-width:1180px}
+.res.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+.rcard{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column}
+.rcard .n{font-family:var(--serif);font-style:italic;color:var(--copper-soft);font-size:1.2rem}
+.rcard .buy{margin-top:.9rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.rcard .from{font-family:var(--serif);font-size:1.45rem;margin-top:.2rem}
+.rcard .to{font-family:var(--serif);font-size:1.9rem;margin-top:.2rem}
+.rcard .to em{font-style:italic}
+.rcard .price{margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid var(--line)}
+.rcard .price small{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--copper-soft)}
+.rcard .price b{display:block;font-family:var(--serif);font-weight:400;font-size:2.6rem;line-height:1.05;margin-top:.3rem}
+.rcard .norm{font-size:.82rem;color:var(--muted);margin-top:.35rem}
+.rcard .note{font-size:.76rem;color:var(--muted);margin-top:.8rem;line-height:1.5}
+.res-head{display:flex;justify-content:space-between;gap:1.2rem;align-items:end;flex-wrap:wrap;margin-bottom:1.3rem;max-width:1180px}
+.res-head p{font-size:.92rem;color:var(--muted);max-width:40rem}
+.res-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+
+/* dealers */
+.dlr{background:var(--paper)}
+.dl-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.6rem,4vw,4rem);align-items:start}
+.mapwrap{position:relative}
+.map{width:100%;height:auto;display:block}
+.map .st{fill:#ddd5c8;stroke:var(--paper);stroke-width:1.2;cursor:pointer;transition:fill .2s}
+.map .st.has{fill:#c9bdab}
+.map .st:hover,.map .st:focus{fill:var(--copper-soft);outline:none}
+.map .st.sel{fill:var(--copper)}
+.map .lb{font:700 12px var(--sans);letter-spacing:.08em;fill:var(--ink);pointer-events:none;text-anchor:middle}
+.map .lb.sel{fill:#fff}
+.map .lb.sm{font-size:10px}
+.map .ld{stroke:var(--ink);stroke-width:.8;opacity:.5}
+.map .cap{font:700 10px var(--sans);letter-spacing:.2em;fill:var(--muted-dark);text-anchor:middle}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+.chips button{background:#fff;border:1px solid var(--lline);border-radius:999px;padding:.45rem .85rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;cursor:pointer;color:var(--ink)}
+.chips button:hover{border-color:var(--copper)}
+.chips button.sel{background:var(--copper);border-color:var(--copper);color:#fff}
+.list h3{font-size:2.2rem;margin:.5rem 0 .4rem}
+.list .hint{font-size:.92rem;color:var(--body);line-height:1.6}
+.dcards{display:grid;gap:.75rem;margin-top:1.2rem}
+.dcard{background:#fff;border:1px solid var(--lline);border-radius:6px;padding:1.1rem 1.2rem;display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;align-items:center}
+.dcard b{font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--ink);line-height:1.1}
+.dcard .ad{grid-column:1;font-size:.8rem;color:var(--muted-dark)}
+.dcard .acts{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;gap:.4rem;align-items:stretch}
+.dcard .acts a{display:flex;align-items:center;justify-content:center;gap:.4rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--lline);border-radius:999px;padding:.5rem .85rem;white-space:nowrap;color:var(--ink)}
+.dcard .acts a.ph{background:var(--ink);border-color:var(--ink);color:#fff;letter-spacing:.04em;text-transform:none;font-size:.78rem}
+.dcard .acts a:hover{border-color:var(--copper)}
+.dcard .acts a.ph:hover{background:var(--copper);border-color:var(--copper)}
+.empty{margin-top:1.2rem;padding:1.3rem;border:1px dashed rgba(18,19,21,.25);border-radius:6px;font-size:.9rem;color:var(--body);line-height:1.6}
+
+/* end */
+.end{align-items:center;justify-content:center;text-align:center}
+.end .bg{position:absolute;inset:0}
+.end .bg img{width:100%;height:100%;object-fit:cover;opacity:.35}
+.end .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 50%,rgba(18,19,21,.55),var(--ink))}
+.end .c{position:relative;z-index:2;padding:7rem var(--pad) 4rem;max-width:56rem;display:flex;flex-direction:column;align-items:center}
+.end h2{margin:1rem 0 1.2rem}
+.end .lead{margin:0 auto}
+.end .btns{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;margin-top:2rem}
+.end .info{display:flex;gap:1.2rem 3rem;flex-wrap:wrap;justify-content:center;margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid var(--line);font-size:.9rem;color:#d6d8db;line-height:1.6}
+.end .info b{display:block;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.end .info a{color:var(--copper-soft)}
+.end .lg{display:flex;align-items:center;justify-content:center;gap:1.4rem;margin-top:2.6rem}
+.end .lg .sep{width:1px;height:40px;background:rgba(235,236,237,.3)}
+.end .lg .ts{height:40px;width:auto}
+.end .lg .ln{height:52px;width:auto}
+.end .fine{text-align:center;margin-top:1.6rem}
+/* footer */
+.site-foot{background:var(--ink);padding:3rem var(--pad);display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;border-top:1px solid var(--line)}
+.site-foot .lg{display:flex;align-items:center;gap:1.2rem}
+.site-foot .lg .sep{width:1px;height:30px;background:rgba(235,236,237,.3)}
+.site-foot .lg .aa{height:20px;width:auto}
+.site-foot .lg .ln{height:40px;width:auto}
+.site-foot p{font-size:.76rem;color:var(--muted);max-width:40rem}
+
+
+@media (max-width:1100px){.bar nav{display:none}}
+@media (max-width:980px){
+  .head2,.dl-grid{grid-template-columns:1fr;gap:1.4rem}
+  .ladder,.res,.res.two{grid-template-columns:1fr}
+  .cond{grid-template-columns:1fr}
+  .cover .visual{inset:0}
+  .cover .visual::after{background:linear-gradient(0deg,var(--ink) 18%,rgba(18,19,21,.55) 55%,rgba(18,19,21,.25) 100%)}
+}
+@media (max-width:720px){.choices{grid-template-columns:1fr}}
+@media (max-width:620px){
+  .sec{padding-top:5.6rem;padding-bottom:3.6rem}
+  .bar{padding:.8rem 1rem}
+  .bar .logo{height:26px}.bar .linn{height:26px}.bar .logos{gap:.7rem}
+  .navcta{display:none}
+  .meta{gap:1rem 1.6rem}
+  .stepper button .v{display:none}
+  .stepper button{padding-right:.8rem}
+  .dcard{grid-template-columns:1fr}
+  .dcard .acts{grid-column:1;grid-row:auto;margin-top:.5rem}
+  .dcard .acts a{font-size:.66rem}
+  .rcard .price b{font-size:2.3rem}
+}
+</style>
+</head>
+<body>
+
+<header class="bar" id="bar">
+  <div class="logos">
+    <a href="https://thesoundstore.nz" class="tss"><img class="logo light" src="img/tss-white.png" alt="The Sound Store"><img class="logo dark" src="img/tss-colour.png" alt="The Sound Store"></a>
+    <span class="sep"></span>
+    <img class="linn light" src="img/linn-white.png" alt="Linn">
+    <img class="linn dark" src="img/linn-black.png" alt="Linn">
+  </div>
+  <nav>
+    <a href="#offer" data-sec="offer">The offer</a>
+    <a href="#build" data-sec="build">What it’s worth</a>
+    <a href="#demo" data-sec="demo">Book a demo</a>
+  </nav>
+  <div class="right">
+    <a class="navcta" href="tel:095202105">09 520 2105</a>
+  </div>
+</header>
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+
+<section class="slide cover" id="cover">
+  <div class="visual"><img src="img/hero.jpg" alt="Linn Selekt DSM in black on a dark timber sideboard"></div>
+  <div class="copy">
+    <div class="eyebrow r">Linn Selekt DSM · New to Linn promotion</div>
+    <h1 class="r d1">The next level<br>is <em>on us.</em></h1>
+    <p class="lead r d2">Now is a great time to look at getting into the most futureproof and upgradeable performance streamer on the market. Customers buying a Selekt DSM Classic or Edition with an output cartridge and DAC will receive an upgrade to the next level DAC at no extra cost.</p>
+    <div class="meta r d3">
+      <div><b>16 Nov – 5 Jan</b>Promotion period</div>
+      <div><b>Up to <span class="cur" data-max></span></b>Customer saving</div>
+    </div>
+    <div class="btns r d4"><a class="cta" href="#build">Choose your Selekt</a><a class="cta alt" href="#demo">Book a demo</a></div>
+  </div>
+</section>
+
+<section class="slide paper sec" id="offer">
+  <div class="head2">
+    <div><div class="eyebrow r">The offer</div><h2 class="r d1">Choose your DAC.<br><em>We’ll raise you one.</em></h2></div>
+    <p class="lead r d2">Selekt DSM is built to grow with you. Choose the DAC level you want, and Linn will upgrade you to the next one at no extra cost.</p>
+  </div>
+  <div class="ladder" id="ladder"></div>
+  <div class="cond r d3">
+    <div><b>When</b>New Selekt DSM purchases from 16 November 2026 to 5 January 2027.</div>
+    <div><b>Eligible</b>Selekt DSM Classic or Edition purchased with an output cartridge and a DAC.</div>
+    <div><b>One per DSM</b>One DAC upgrade per Selekt DSM, even if the system has more than one DAC.</div>
+  </div>
+</section>
+
+<section class="slide sec bld" id="build">
+  <div class="head2">
+    <div><div class="eyebrow r">What it’s worth</div><h2 class="r d1">Build your <em>Selekt.</em></h2></div>
+    <p class="lead r d2">Three quick choices and you’ll see exactly what the promotion means for the system you have in mind.</p>
+  </div>
+  <ol class="stepper r d2" id="stepper">
+    <li><button type="button" data-go="0"><span class="k">1</span>Use<span class="v" id="sv0"></span></button></li>
+    <li><button type="button" data-go="1"><span class="k">2</span>Hub<span class="v" id="sv1"></span></button></li>
+    <li><button type="button" data-go="2"><span class="k">3</span>DAC upgrade</button></li>
+  </ol>
+
+  <div class="panel r d3" id="p0">
+    <h3 class="q">How do you want to use your Linn Selekt DSM?</h3>
+    <div class="choices">
+      <button type="button" class="choice" data-use="Line Out">
+        <span class="tag">Line Out cartridge</span>
+        <h3>As a streamer</h3>
+        <svg class="chain" viewBox="0 0 360 80" aria-hidden="true"><rect class="hl" x="6" y="22" width="100" height="36" rx="4"/><text x="56" y="44" text-anchor="middle">SELEKT DSM</text><path d="M106 40H136"/><rect x="136" y="22" width="100" height="36" rx="4"/><text x="186" y="44" text-anchor="middle">YOUR AMP</text><path d="M236 40H266"/><rect x="266" y="14" width="40" height="52" rx="4"/><rect x="314" y="14" width="40" height="52" rx="4"/></svg>
+        <p>Selekt DSM goes into your existing amplifier. Ideal if you already love your amp and want a world-class streaming source in front of it.</p>
+        <span class="go"><span>Choose streamer</span><span>&#8594;</span></span>
+      </button>
+      <button type="button" class="choice" data-use="Power Out">
+        <span class="tag">Power Out cartridge</span>
+        <h3>As an integrated amplifier with streaming</h3>
+        <svg class="chain" viewBox="0 0 360 80" aria-hidden="true"><rect class="hl" x="56" y="22" width="150" height="36" rx="4"/><text x="131" y="44" text-anchor="middle">SELEKT DSM + AMP</text><path d="M206 40H246"/><rect x="246" y="14" width="40" height="52" rx="4"/><rect x="294" y="14" width="40" height="52" rx="4"/></svg>
+        <p>Streaming and amplification in one elegant box. Just add your speakers for a complete, beautifully simple system.</p>
+        <span class="go"><span>Choose all-in-one</span><span>&#8594;</span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="panel" id="p1" hidden>
+    <h3 class="q">Choose your hub.</h3>
+    <div class="choices">
+      <button type="button" class="choice" data-hub="Selekt Classic">
+        <div class="hubimg"><img src="img/classic-black-34.webp" alt="Linn Selekt DSM Classic hub in black" loading="lazy"></div>
+        <span class="tag">Selekt DSM Classic</span>
+        <h3>Classic</h3>
+        <ul class="ticks">
+          <li>Powder-coated folded aluminium casework on a machined aluminium base</li>
+          <li>Cut-glass control dial with 100 LEDs</li>
+          <li>Six machined stainless-steel smart buttons</li>
+          <li>Built-in phono stage, headphone amp and Utopik power supply</li>
+        </ul>
+        <span class="go"><span>From <span data-from="Selekt Classic"></span></span><span>&#8594;</span></span>
+      </button>
+      <button type="button" class="choice" data-hub="Selekt Edition Hub">
+        <div class="hubimg"><img src="img/edition-black-34.webp" alt="Linn Selekt DSM Edition hub in black" loading="lazy"></div>
+        <span class="tag">Selekt DSM Edition</span>
+        <h3>Edition</h3>
+        <ul class="ticks">
+          <li>All-machined aluminium for improved rigidity and interior isolation</li>
+          <li>Mirrored glass fascia with a large-format display</li>
+          <li>Upgraded dial with a turned stainless-steel bearing</li>
+          <li>Linn’s deluxe, higher-performance Selekt</li>
+        </ul>
+        <span class="go"><span>From <span data-from="Selekt Edition Hub"></span></span><span>&#8594;</span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="panel" id="p2" hidden>
+    <div class="res-head">
+      <div><h3 class="q" id="resTitle" style="margin-bottom:.4rem"></h3><p id="resSub"></p></div>
+    </div>
+    <div class="res" id="res"></div>
+    <div class="res-actions"><a class="cta" href="#demo">Book a demo with The Sound Store</a><button type="button" class="cta alt" id="restart">Start again</button></div>
+    <p class="fine" id="resFine"></p>
+  </div>
+</section>
+
+<section class="slide end" id="demo">
+  <div class="bg"><img src="img/wide.jpg" alt="" loading="lazy"></div>
+  <div class="c">
+    <div class="eyebrow r">Let’s get started</div>
+    <h2 class="r d1">Book a demo <em>today.</em></h2>
+    <p class="lead r d2">Hear Selekt DSM for yourself at The Sound Store in Rosedale, or ask about trialling it in your own home. We’ll help you choose the right hub, output and DAC for your room and music.</p>
+    <div class="btns r d3">
+      <a class="cta" href="https://thesoundstore.nz/pages/contact-us" target="_blank" rel="noopener">Book a demo</a>
+      <a class="cta alt" href="tel:095202105">Call 09 520 2105</a>
+    </div>
+    <div class="info r d3">
+      <div><b>Visit</b>1/43 Apollo Drive, Rosedale, Auckland 0632<br>By appointment</div>
+      <div><b>Email</b><a href="mailto:sales@thesoundstore.nz">sales@thesoundstore.nz</a></div>
+    </div>
+    <div class="lg r d4">
+      <img class="ts" src="img/tss-white.png" alt="The Sound Store"><span class="sep"></span><img class="ln" src="img/linn-white.png" alt="Linn">
+    </div>
+    <p class="fine r d4">Prices are New Zealand recommended retail in NZD, including GST. Terms and Conditions apply, please speak to The Sound Store for more information.</p>
+  </div>
+</section>
+
+</main>
+
+<script>window.SITE={"routes":[{"chassis":"Selekt Classic","card":"Line Out","steps":[{"from":"Standard DAC","to":"Katalyst DAC","pay":{"AUD":11995,"NZD":12995},"get":{"AUD":14995,"NZD":16995},"save":{"AUD":3000,"NZD":4000}},{"from":"Katalyst DAC","to":"Organik Stereo DAC","pay":{"AUD":14995,"NZD":16995},"get":{"AUD":17995,"NZD":19995},"save":{"AUD":3000,"NZD":3000}},{"from":"Organik Stereo DAC","to":"Dual Mono Organik","pay":{"AUD":20590,"NZD":22695},"get":{"AUD":24995,"NZD":27995},"save":{"AUD":4405,"NZD":5300},"dsm":{"AUD":17995,"NZD":19995},"upg":{"AUD":2595,"NZD":2700},"mono":true}]},{"chassis":"Selekt Classic","card":"Power Out","steps":[{"from":"Standard DAC","to":"Katalyst DAC","pay":{"AUD":12495,"NZD":13995},"get":{"AUD":14995,"NZD":16995},"save":{"AUD":2500,"NZD":3000}},{"from":"Katalyst DAC","to":"Organik Stereo DAC","pay":{"AUD":14995,"NZD":16995},"get":{"AUD":18495,"NZD":20995},"save":{"AUD":3500,"NZD":4000}}]},{"chassis":"Selekt Edition Hub","card":"Line Out","steps":[{"from":"Standard DAC","to":"Katalyst DAC","pay":{"AUD":19995,"NZD":21995},"get":{"AUD":22740,"NZD":24995},"save":{"AUD":2745,"NZD":3000}},{"from":"Katalyst DAC","to":"Organik Stereo DAC","pay":{"AUD":22740,"NZD":24995},"get":{"AUD":25940,"NZD":28995},"save":{"AUD":3200,"NZD":4000}},{"from":"Organik Stereo DAC","to":"Dual Mono Organik","pay":{"AUD":28535,"NZD":31695},"get":{"AUD":32985,"NZD":36995},"save":{"AUD":4450,"NZD":5300},"dsm":{"AUD":25940,"NZD":28995},"upg":{"AUD":2595,"NZD":2700},"mono":true}]},{"chassis":"Selekt Edition Hub","card":"Power Out","steps":[{"from":"Standard DAC","to":"Katalyst DAC","pay":{"AUD":20995,"NZD":22995},"get":{"AUD":23740,"NZD":25995},"save":{"AUD":2745,"NZD":3000}},{"from":"Katalyst DAC","to":"Organik Stereo DAC","pay":{"AUD":23740,"NZD":25995},"get":{"AUD":26940,"NZD":29995},"save":{"AUD":3200,"NZD":4000}}]}]};</script>
+<script src="app.js" defer></script>
+</body>
+</html>
